@@ -1,5 +1,5 @@
 require('dotenv').config()
-const port = process.env.PORT || 8397;
+const port = process.env.PORT || 8361;
 const express = require('express');
 const cors = require('cors');
 const db = require('./config/mongoose');
@@ -20,7 +20,7 @@ app.use(express.json());
 //use routes
 app.use('/', require('./routes'));
 
-app.listen(port, function(error) {
+app.listen(port, function (error) {
 
     if (error) {
         console.log(`Error in running the server:${error}`);
