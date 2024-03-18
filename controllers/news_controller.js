@@ -13,7 +13,7 @@ module.exports.topHeadLine = async function (req, res) {
             language: 'en',
             country: 'us'
         });
-        return res.json({ success: true, msg: "All Top headline", news: response });
+        return res.json({ success: true, msg: "All Top headline", data: { news: response } });
 
     } catch (error) {
         console.log('error in getting  top headline ..', error);
@@ -36,7 +36,7 @@ module.exports.everyThing = async function (req, res) {
             //sortBy: 'relevancy',
             //page: 2
         })
-        return res.json({ success: true, msg: "Everything News", news: response });
+        return res.json({ success: true, msg: "Everything News", data: { news: response } });
 
     } catch (error) {
         console.log('error in getting news ..', error);
@@ -54,7 +54,7 @@ module.exports.sources = async function (req, res) {
             language: 'en',
             country: 'us'
         })
-        return res.json({ success: true, msg: "Sources.. News", news: response });
+        return res.json({ success: true, msg: "Sources.. News", data: { news: response } });
 
     } catch (error) {
         console.log('error in getting Sources.. News ..', error);
